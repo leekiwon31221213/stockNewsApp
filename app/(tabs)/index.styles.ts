@@ -81,4 +81,20 @@ export const styles = StyleSheet.create({
     color: "#ffffff",
     textAlign: "center",
   },
+  btn: {
+    backgroundColor: "#2270C3",
+    width: "100%",
+    minHeight: 48,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 10,
+  },
+  btnPressed: {
+    opacity: 0.8,
+  },
+  btnText: {
+    fontSize: 14,
+    fontWeight: "600",
+    color: "#ffffff",
+  },
 });

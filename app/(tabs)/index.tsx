@@ -8,6 +8,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { styles } from "./index.styles";
 import type * as Types from "./index.type";
 
+import { singUp } from "@/api/news";
+
 // 8차시
 function PropsStudy_8({ name }: Types.PropsStudy8Props) {
   return (
@@ -67,11 +69,33 @@ function Modal_10({ visible, onClose }: Types.ModalProps) {
   );
 }
 
+// 13차시
+
+const news = [
+  { id: "1", title: "삼성전자 주가 상승" },
+  { id: "2", title: "애플 신제품 발표" },
+  { id: "3", title: "엔비디아 실적 발표" },
+];
+
+// 14차시
+
 export default function HomeScreen() {
   const { width: width1, height: height1 } = Dimensions.get("window");
   const { width: width2, height: height2 } = useWindowDimensions();
   const [count, setCount] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [recoveryEmail, setRecoveryEmail] = useState("");
+
+  async function SendSignUpBtn() {
+    await singUp({
+      email: email,
+      password: password,
+      recoveryEmail: recoveryEmail,
+    });
+  }
 
   const handlePress = () => {
     alert("버튼클릭");
@@ -233,6 +257,49 @@ export default function HomeScreen() {
               }}
             >
               <Text>디테일 페이지1</Text>
+            </Pressable>
+          </View>
+
+          <View style={styles.lesson}>
+            <Text style={styles.lessonTitle}>12차시 - 하단 탭 메뉴 만들기</Text>
+
+            <Text>/tab/_layout.tsx참고</Text>
+          </View>
+
+          <View style={styles.lesson}>
+            <Text style={styles.lessonTitle}>13차시 - 목록을 눌러 상세화면으로 데이터 전달하기</Text>
+
+            {news.map((item) => {
+              return (
+                <Pressable
+                  key={item.id}
+                  onPress={() => {
+                    router.push({
+                      pathname: "/detail/detail1",
+                      params: {
+                        id: item.id,
+                        title: item.title,
+                      },
+                    });
+                  }}
+                >
+                  <Text>{item.title}</Text>
+                </Pressable>
+              );
+            })}
+          </View>
+
+          <View style={styles.lesson}>
+            <Text style={styles.lessonTitle}>14차시 - Axios로 API 호출하기</Text>
+
+            <TextInput value={email} onChangeText={setEmail} keyboardType="email-address" style={styles.input} placeholder="이메일을 입력해주세요"></TextInput>
+
+            <TextInput value={password} onChangeText={setPassword} style={styles.input} placeholder="비밀번호를 입력해주세요" secureTextEntry></TextInput>
+
+            <TextInput value={recoveryEmail} onChangeText={setRecoveryEmail} keyboardType="email-address" style={styles.input} placeholder="복구 이메일을 입력해주세요"></TextInput>
+
+            <Pressable accessibilityRole="button" style={({ pressed }) => [styles.btn, pressed && styles.btnPressed]} onPress={SendSignUpBtn}>
+              <Text style={styles.btnText}>회원가입</Text>
             </Pressable>
           </View>
         </View>
