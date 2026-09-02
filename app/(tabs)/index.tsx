@@ -8,7 +8,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { styles } from "./index.styles";
 import type * as Types from "./index.type";
 
-import { singUp } from "@/api/news";
+import { popularList as getPopularList, type PopularList, singUp } from "@/api/news";
 
 // 8차시
 function PropsStudy_8({ name }: Types.PropsStudy8Props) {
@@ -89,6 +89,10 @@ export default function HomeScreen() {
   const [password, setPassword] = useState("");
   const [recoveryEmail, setRecoveryEmail] = useState("");
 
+  const [popularList, setPopularList] = useState<PopularList[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string>("");
+
   async function SendSignUpBtn() {
     await singUp({
       email: email,
@@ -107,6 +111,20 @@ export default function HomeScreen() {
   const handleChangeName = (text: string) => {
     setName(text);
   };
+
+  async function handleGetPopularList() {
+    try {
+      setIsLoading(true);
+      setError("");
+      const data = await getPopularList();
+      console.log("인기 목록 데이터", data);
+      setPopularList(data);
+    } catch (e) {
+      setError("데이터를 불러오지 못했습니다.");
+    } finally {
+      setIsLoading(false);
+    }
+  }
 
   const users = [
     { id: "1", name: "기원" },
@@ -301,6 +319,26 @@ export default function HomeScreen() {
             <Pressable accessibilityRole="button" style={({ pressed }) => [styles.btn, pressed && styles.btnPressed]} onPress={SendSignUpBtn}>
               <Text style={styles.btnText}>회원가입</Text>
             </Pressable>
+          </View>
+
+          <View style={styles.lesson}>
+            <Text style={styles.lessonTitle}>15차시 - API 데이터 조회하고 상태 처리하기</Text>
+
+            <Pressable onPress={handleGetPopularList} style={({ pressed }) => [styles.btn, pressed && styles.btnPressed]}>
+              <Text style={styles.btnText}>뉴스 불러오기</Text>
+            </Pressable>
+
+            {isLoading && <Text>불러오는 중...</Text>}
+
+            {error !== "" && <Text>{error}</Text>}
+
+            {!isLoading && error === "" && popularList.length === 0 && <Text>데이터가 없습니다.</Text>}
+
+            {popularList.map((item) => (
+              <View key={item.id}>
+                <Text>{item.name}</Text>
+              </View>
+            ))}
           </View>
         </View>
       </ScrollView>
