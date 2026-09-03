@@ -27,7 +27,7 @@ export async function singUp(data: signUp): Promise<void> {
 }
 
 export async function popularList(): Promise<PopularList[]> {
-  const response = await axios.get<{ data: PopularList[] }>("API 주소");
+  const response = await axios.get<{ data: PopularList[] }>("https://stockmailnews.duckdns.org/stocks/popular?limit=10");
   console.log("실제 인기 목록", response.data.data);
 
   return response.data.data;
