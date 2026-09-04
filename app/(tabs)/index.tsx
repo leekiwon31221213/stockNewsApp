@@ -24,6 +24,11 @@ import { Lesson17 } from "@/components/home/Lesson17";
 import { Lesson18 } from "@/components/home/Lesson18";
 import { Lesson19 } from "@/components/home/Lesson19";
 import { Lesson20 } from "@/components/home/Lesson20";
+import { Lesson21 } from "@/components/home/Lesson21";
+import { Lesson22 } from "@/components/home/Lesson22";
+import { Lesson23 } from "@/components/home/Lesson23";
+import { Lesson24 } from "@/components/home/Lesson24";
+import { Lesson25 } from "@/components/home/Lesson25";
 import { styles } from "./index.styles";
 
 export default function HomeScreen() {
@@ -57,6 +62,11 @@ export default function HomeScreen() {
           <Lesson18></Lesson18>
           <Lesson19></Lesson19>
           <Lesson20></Lesson20>
+          <Lesson21></Lesson21>
+          <Lesson22></Lesson22>
+          <Lesson23></Lesson23>
+          <Lesson24></Lesson24>
+          <Lesson25></Lesson25>
         </View>
       </ScrollView>
     </SafeAreaView>
