@@ -12,13 +12,16 @@
     },
     "android": {
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.stocknewsapp.mobile",
+      "googleServicesFile": "./google-services.json"
     },
     "web": {
       "output": "static"
     },
     "plugins": [
       "expo-router",
+      "expo-notifications",
       [
         "expo-splash-screen",
         {
@@ -34,6 +37,12 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "2c6f5288-ee8b-441b-a64f-f17155fdb490"
+      }
     }
   }
 }

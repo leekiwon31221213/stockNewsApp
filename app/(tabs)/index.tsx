@@ -29,6 +29,13 @@ import { Lesson22 } from "@/components/home/Lesson22";
 import { Lesson23 } from "@/components/home/Lesson23";
 import { Lesson24 } from "@/components/home/Lesson24";
 import { Lesson25 } from "@/components/home/Lesson25";
+import { Lesson26 } from "@/components/home/Lesson26";
+import { Lesson27 } from "@/components/home/Lesson27";
+import { Lesson28 } from "@/components/home/Lesson28";
+import { Lesson29 } from "@/components/home/Lesson29";
+import { Lesson30 } from "@/components/home/Lesson30";
+import { Lesson31 } from "@/components/home/Lesson31";
+import { Lesson32 } from "@/components/home/Lesson32";
 import { styles } from "./index.styles";
 
 export default function HomeScreen() {
@@ -67,6 +74,13 @@ export default function HomeScreen() {
           <Lesson23></Lesson23>
           <Lesson24></Lesson24>
           <Lesson25></Lesson25>
+          <Lesson26></Lesson26>
+          <Lesson27></Lesson27>
+          <Lesson28></Lesson28>
+          <Lesson29></Lesson29>
+          <Lesson30></Lesson30>
+          <Lesson31></Lesson31>
+          <Lesson32></Lesson32>
         </View>
       </ScrollView>
     </SafeAreaView>
