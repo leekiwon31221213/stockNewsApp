@@ -39,6 +39,7 @@ import { Lesson32 } from "@/components/home/Lesson32";
 import { Lesson33 } from "@/components/home/Lesson33";
 import { Lesson34 } from "@/components/home/Lesson34";
 import { Lesson35 } from "@/components/home/Lesson35";
+import { Lesson36 } from "@/components/home/Lesson36";
 import { styles } from "./index.styles";
 
 export default function HomeScreen() {
@@ -87,6 +88,7 @@ export default function HomeScreen() {
           <Lesson33></Lesson33>
           <Lesson34></Lesson34>
           <Lesson35></Lesson35>
+          <Lesson36></Lesson36>
         </View>
       </ScrollView>
     </SafeAreaView>

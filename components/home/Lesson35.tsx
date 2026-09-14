@@ -54,7 +54,7 @@ export function Lesson35() {
       </Text>
       <Text>네트워크 종류: {networkType}</Text>
 
-      {!isConnected && <Text>인터넷 연결을 확인해 주세요</Text>}
+      {isConnected === false && <Text>인터넷 연결을 확인해 주세요</Text>}
 
       <Pressable onPress={handleCheckNetwork} style={({ pressed }) => [styles.btn, pressed && styles.btnPressed]}>
         <Text style={styles.btnText}>현재 네트워크 확인</Text>
