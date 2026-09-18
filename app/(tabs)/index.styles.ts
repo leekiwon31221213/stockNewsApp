@@ -8,6 +8,46 @@ export const styles = StyleSheet.create({
   content: {
     padding: 20,
   },
+  lessonList: {
+    padding: 20,
+    gap: 12,
+  },
+  pageTitle: {
+    marginBottom: 12,
+    fontSize: 24,
+    fontWeight: "700",
+    color: "#111111",
+  },
+  lessonLink: {
+    minHeight: 64,
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 12,
+    backgroundColor: "#ffffff",
+    borderRadius: 12,
+  },
+  lessonLinkPressed: {
+    opacity: 0.7,
+  },
+  lessonLinkNumber: {
+    minWidth: 28,
+    fontSize: 14,
+    fontWeight: "700",
+    color: "#2270C3",
+  },
+  lessonLinkTitle: {
+    flex: 1,
+    fontSize: 16,
+    lineHeight: 24,
+    fontWeight: "600",
+    color: "#111111",
+  },
+  lessonLinkArrow: {
+    fontSize: 28,
+    color: "#666666",
+  },
   container: {
     alignItems: "center",
     gap: 20,
@@ -16,6 +56,7 @@ export const styles = StyleSheet.create({
     flexDirection: "column",
   },
   lesson: {
+    flex: 1,
     width: "100%",
     padding: 20,
     gap: 12,

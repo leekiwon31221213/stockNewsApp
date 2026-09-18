@@ -17,6 +17,7 @@ function RootLayout() {
       <Stack>
         <Stack.Screen name="(tabs)"></Stack.Screen>
         <Stack.Screen name="detail/detail1"></Stack.Screen>
+        <Stack.Screen name="detail/[lessonId]" options={{ title: "학습 상세" }}></Stack.Screen>
       </Stack>
     </QueryClientProvider>
   );

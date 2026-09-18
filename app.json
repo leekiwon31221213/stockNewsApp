@@ -6,8 +6,7 @@
     "orientation": "portrait",
     "scheme": "stocknewsapp",
     "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/logo.png",
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.stocknewsapp.mobile",
@@ -21,10 +20,8 @@
     "android": {
       "package": "com.stocknewsapp.mobile",
       "googleServicesFile": "./google-services.json",
-      "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
       "permissions": ["CAMERA", "ACCESS_FINE_LOCATION", "ACCESS_COARSE_LOCATION", "POST_NOTIFICATIONS"],
@@ -62,7 +59,7 @@
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "프로젝트 ID"
+        "projectId": "2c6f5288-ee8b-441b-a64f-f17155fdb490"
       }
     }
   }
