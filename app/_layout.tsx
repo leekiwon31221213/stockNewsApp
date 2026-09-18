@@ -1,13 +1,17 @@
+import { initSentry, Sentry } from "@/utills/errorLogger";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Stack } from "expo-router";
 import { LogBox } from "react-native";
+
+// 앱이 시작될 때 Sentry를 연결
+initSentry();
 
 // 학습 화면의 중첩 목록 경고만 숨김
 LogBox.ignoreLogs(["VirtualizedLists should never be nested"]);
 
 const queryClient = new QueryClient();
 
-export default function RootLayout() {
+function RootLayout() {
   return (
     <QueryClientProvider client={queryClient}>
       <Stack>
@@ -17,3 +21,4 @@ export default function RootLayout() {
     </QueryClientProvider>
   );
 }
+export default Sentry.wrap(RootLayout);

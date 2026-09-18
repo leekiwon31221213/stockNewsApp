@@ -7,17 +7,41 @@
     "scheme": "stocknewsapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "icon": "./assets/images/icon.png",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.stocknewsapp.mobile",
+      "associatedDomains": ["applinks:stocknews.com"],
+      "infoPlist": {
+        "NSCameraUsageDescription": "카메라 사용 권한 필요",
+        "NSPhotoLibraryUsageDescription": "사진 보관함 접근 권한 필요",
+        "NSLocationWhenInUseUsageDescription": "위치 정보 사용 권한 필요"
+      }
     },
     "android": {
+      "package": "com.stocknewsapp.mobile",
+      "googleServicesFile": "./google-services.json",
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
-      "package": "com.stocknewsapp.mobile",
-      "googleServicesFile": "./google-services.json"
-    },
-    "web": {
-      "output": "static"
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": ["CAMERA", "ACCESS_FINE_LOCATION", "ACCESS_COARSE_LOCATION", "POST_NOTIFICATIONS"],
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            {
+              "scheme": "https",
+              "host": "stocknews.com",
+              "pathPrefix": "/detail"
+            }
+          ],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ]
     },
     "plugins": [
       "expo-router",
@@ -35,14 +59,10 @@
         }
       ]
     ],
-    "experiments": {
-      "typedRoutes": true,
-      "reactCompiler": true
-    },
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "2c6f5288-ee8b-441b-a64f-f17155fdb490"
+        "projectId": "프로젝트 ID"
       }
     }
   }
