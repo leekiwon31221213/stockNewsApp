@@ -39,6 +39,11 @@ import { Lesson38 } from "@/components/home/Lesson38";
 import { Lesson39 } from "@/components/home/Lesson39";
 import { Lesson40 } from "@/components/home/Lesson40";
 import { Lesson41 } from "@/components/home/Lesson41";
+import { Lesson42 } from "@/components/home/Lesson42";
+import { Lesson43 } from "@/components/home/Lesson43";
+import { Lesson44 } from "@/components/home/Lesson44";
+import { Lesson45 } from "@/components/home/Lesson45";
+
 import { router, useLocalSearchParams } from "expo-router";
 import { ComponentType } from "react";
 import { Pressable, ScrollView, Text, View } from "react-native";
@@ -88,6 +93,10 @@ const LESSON_COMPONENTS: Record<string, ComponentType> = {
   "39": Lesson39,
   "40": Lesson40,
   "41": Lesson41,
+  "42": Lesson42,
+  "43": Lesson43,
+  "44": Lesson44,
+  "45": Lesson45,
 };
 
 const LESSON_WITH_OWN_SCROLL = ["6", "19", "33", "37", "41"];

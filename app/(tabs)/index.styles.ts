@@ -138,4 +138,30 @@ export const styles = StyleSheet.create({
     fontWeight: "600",
     color: "#ffffff",
   },
+
+  formContent: {
+    gap: 12,
+    paddingBottom: 80,
+  },
+
+  textarea: {
+    minHeight: 120,
+  },
+  gestureCard: {
+    gap: 8,
+    padding: 20,
+    borderRadius: 16,
+    backgroundColor: "#ffffff",
+    elevation: 4,
+  },
+  toastBox: {
+    padding: 14,
+    borderRadius: 12,
+    backgroundColor: "#222222",
+  },
+
+  toastText: {
+    color: "#ffffff",
+    fontWeight: "600",
+  },
 });

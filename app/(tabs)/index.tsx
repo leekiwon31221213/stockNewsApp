@@ -48,6 +48,10 @@ const LESSON_LIST = [
   "Android·iOS 기기별 차이와 설정 처리하기",
   "Android·iOS 실제 배포 빌드와 업데이트 이해하기",
   "입력폼·키보드·스크롤이 같이 있는 실제 화면 처리하기",
+  "아래에서 올라오는 Bottom Sheet 만들기",
+  "터치·스와이프·드래그 제스처 처리하기",
+  "Fade·Scale·Slide·Spring 애니메이션 만들기",
+  "여러 애니메이션을 순서대로 연결하기",
 ].map((title, index) => ({
   id: String(index + 1),
   title: `${index + 1}차시 - ${title}`,
