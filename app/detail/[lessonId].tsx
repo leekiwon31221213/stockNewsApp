@@ -43,6 +43,21 @@ import { Lesson42 } from "@/components/home/Lesson42";
 import { Lesson43 } from "@/components/home/Lesson43";
 import { Lesson44 } from "@/components/home/Lesson44";
 import { Lesson45 } from "@/components/home/Lesson45";
+import { Lesson46 } from "@/components/home/Lesson46";
+import { Lesson47 } from "@/components/home/Lesson47";
+import { Lesson48 } from "@/components/home/Lesson48";
+import { Lesson49 } from "@/components/home/Lesson49";
+import { Lesson50 } from "@/components/home/Lesson50";
+import { Lesson51 } from "@/components/home/Lesson51";
+import { Lesson52 } from "@/components/home/Lesson52";
+import { Lesson53 } from "@/components/home/Lesson53";
+import { Lesson54 } from "@/components/home/Lesson54";
+import { Lesson55 } from "@/components/home/Lesson55";
+import { Lesson56 } from "@/components/home/Lesson56";
+import { Lesson57 } from "@/components/home/Lesson57";
+import { Lesson58 } from "@/components/home/Lesson58";
+import { Lesson59 } from "@/components/home/Lesson59";
+import { Lesson60 } from "@/components/home/Lesson60";
 
 import { router, useLocalSearchParams } from "expo-router";
 import { ComponentType } from "react";
@@ -97,6 +112,21 @@ const LESSON_COMPONENTS: Record<string, ComponentType> = {
   "43": Lesson43,
   "44": Lesson44,
   "45": Lesson45,
+  "46": Lesson46,
+  "47": Lesson47,
+  "48": Lesson48,
+  "49": Lesson49,
+  "50": Lesson50,
+  "51": Lesson51,
+  "52": Lesson52,
+  "53": Lesson53,
+  "54": Lesson54,
+  "55": Lesson55,
+  "56": Lesson56,
+  "57": Lesson57,
+  "58": Lesson58,
+  "59": Lesson59,
+  "60": Lesson60,
 };
 
 const LESSON_WITH_OWN_SCROLL = ["6", "19", "33", "37", "41"];
