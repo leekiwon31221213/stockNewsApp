@@ -56,7 +56,7 @@ const LESSON_LIST = [
   "스크롤에 따라 이미지·텍스트 크기와 위치 변경하기",
   "Parallax·Sticky Header·Collapsing Header 만들기",
   "카드를 밀어서 삭제하고 드래그하는 인터랙션 만들기",
-  "화면 진입·퇴장과 레이아웃 변경 애니메이션 만들기",
+  "목록 추가·삭제 애니메이션 만들기",
   "Skeleton·Toast·Loading·Haptic 인터랙션 만들기",
   "앱 안에서 웹페이지 띄우기",
   "React Native와 WebView 사이에서 데이터 주고받기",

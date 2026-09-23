@@ -129,7 +129,7 @@ const LESSON_COMPONENTS: Record<string, ComponentType> = {
   "60": Lesson60,
 };
 
-const LESSON_WITH_OWN_SCROLL = ["6", "19", "33", "37", "41"];
+const LESSON_WITH_OWN_SCROLL = ["6", "19", "33", "37", "41", "46", "47", "48", "49", "52", "53"];
 
 export default function LessonDetailScreen() {
   const { lessonId } = useLocalSearchParams<{ lessonId: string }>();
